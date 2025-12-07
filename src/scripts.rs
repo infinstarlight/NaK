@@ -120,6 +120,13 @@ export STEAM_COMPAT_DATA_PATH="$COMPAT_DATA"
 export STEAM_COMPAT_CLIENT_INSTALL_PATH="$STEAM_PATH"
 export PATH="$PROTON_GE/files/bin:$PATH"
 
+# Clearing native .NET environment variables to avoid conflicts
+unset DOTNET_PATH
+unset DOTNET_BUNDLE_EXTRACT_BASE_DIR
+unset DOTNET_ROOT
+unset DOTNET_TOOLS_PATH
+
+
 # DotNet Fixes
 export DOTNET_ROOT=""
 export DOTNET_MULTILEVEL_LOOKUP=0
